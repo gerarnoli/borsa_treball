@@ -3,9 +3,8 @@
     <v-main>
       <Header/>
        <Buscador/>
+       <Empresa/>
       <Footer/>
-     
-
     </v-main>
   </v-app>
 </template>
@@ -15,6 +14,7 @@
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Buscador from './components/Buscador';
+import Empresa from './components/Empresa';
 
 export default {
   name: 'App',
@@ -22,7 +22,8 @@ export default {
   components: {
     Footer,
     Header,
-    Buscador
+    Buscador,
+    Empresa
   },
 
   data: () => ({
