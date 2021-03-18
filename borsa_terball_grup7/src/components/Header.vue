@@ -9,8 +9,7 @@
     
         <v-btn
         color="primary"
-        rounded
-        x-small
+        rounded        
         > Iniciar Sessió</v-btn>
 
     <v-divider
@@ -19,6 +18,8 @@
     
     style="display: inline"
     ></v-divider>
+
+    
      
 
    <v-btn
@@ -32,3 +33,13 @@
            
     </v-footer>
 </template>
+
+<script>
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  setup() {
+    
+  },
+})
+</script>
