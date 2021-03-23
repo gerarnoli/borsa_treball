@@ -4,13 +4,12 @@
     <b-button @click="pedirDatos" variant="primary">Pedir datos</b-button>
     <b-row>
         <b-card-group deck>
-        <Oferta v-for="oferta in resultado"
-            :key=oferta.id
-            :infoOferta=oferta>
-        </Oferta>
+            <Oferta v-for="oferta in resultado"
+                :key=oferta.id
+                :infoOferta=oferta>
+            </Oferta>
         </b-card-group>
     </b-row>
-    <Oferta/>
 </div>
 </template>
 
@@ -22,23 +21,23 @@ import Oferta from './Oferta.vue';
 
 Vue.use(VueAxios, axios);
 
-export default{
+export default {
     name: 'Buscador',
     components: {
         Oferta
-    },
-    methods: {
-        pedirDatos() {
-            this.axios.get(`http://labs.iam.cat/~a16pednieper/treball_g7/api_treball.php/records/oferta`).then((response) => {
-                this.resultado = response.data.records;
-                console.log(this.resultado);
-            })
-        }
     },
     data() {
         return{
             resultado: []
         }
     },
+    methods: {
+        pedirDatos: function () {
+            this.axios.get(`http://labs.iam.cat/~a16pednieper/treball_g7/api_treball.php/records/oferta`).then((response) => {
+                console.log(response.data.records);
+                this.resultado = response.data.records;
+            })
+        }
+    }
 }
 </script>
