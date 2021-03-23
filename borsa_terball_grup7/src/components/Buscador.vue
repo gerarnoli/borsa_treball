@@ -1,15 +1,15 @@
 <template>
 <div>
     <h1>prova Buscador</h1>
-    <b-button @click="pedirDatos" variant="primary">Cerrar</b-button>
-    <!-- <b-row>
+    <b-button @click="pedirDatos" variant="primary">Pedir datos</b-button>
+    <b-row>
         <b-card-group deck>
-        <fichaPelicula v-for="oferta in resultado"
-            :key=pelicula.imdbID
-            :infoPelicula=pelicula>
-        </fichaPelicula>
+        <Oferta v-for="oferta in resultado"
+            :key=oferta.id
+            :infoOferta=oferta>
+        </Oferta>
         </b-card-group>
-    </b-row> -->
+    </b-row>
     <Oferta/>
 </div>
 </template>
@@ -29,7 +29,10 @@ export default{
     },
     methods: {
         pedirDatos() {
-            this.axios.get(`http://labs.iam.cat/~a16pednieper/treball_g7/api_treball.php/records/oferta`).then((response) => {this.resultados = response.data.records; console.log(response) })
+            this.axios.get(`http://labs.iam.cat/~a16pednieper/treball_g7/api_treball.php/records/oferta`).then((response) => {
+                this.resultado = response.data.records;
+                console.log(this.resultado);
+            })
         }
     },
     data() {
