@@ -6,19 +6,13 @@
     >
       <b-button v-b-modal.modal-2 class="admin" variant="primary">Admin</b-button>
       <strong>GRUP 7</strong> — {{ new Date().getFullYear() }}
-      <b-button class="buscador" variant="primary">Buscar ofertes</b-button>
     </v-col>
   </v-footer>
 </template>
-
-
 
 <style scoped>
 .admin {
   float: left;
 }
 
-.buscador {
-  float: right;
-}
 </style>

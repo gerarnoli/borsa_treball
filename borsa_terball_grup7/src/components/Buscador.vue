@@ -1,7 +1,6 @@
 <template>
 <div>
-    <h1>prova Buscador</h1>
-    <b-button @click="pedirDatos" variant="primary">Pedir datos</b-button>
+    <b-button @click="pedirDatos" variant="primary">Mostrar ofertes</b-button>
     <b-row>
         <b-card-group deck>
             <Oferta v-for="oferta in resultado"
