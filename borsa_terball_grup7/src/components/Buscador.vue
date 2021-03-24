@@ -1,7 +1,6 @@
 <template>
 <div>
-    <h1>prova Buscador</h1>
-    <b-button @click="pedirDatos" variant="primary">Pedir datos</b-button>
+    <b-button @click="pedirDatos" variant="success" class="ofertes">Mostrar ofertes</b-button>
     <b-row>
         <b-card-group deck>
             <Oferta v-for="oferta in resultado"
@@ -33,7 +32,7 @@ export default {
     },
     methods: {
         pedirDatos: function () {
-            this.axios.get(`http://labs.iam.cat/~a16pednieper/treball_g7/api_treball.php/records/oferta`).then((response) => {
+            this.axios.get(`http://labs.iam.cat/~a16pednieper/treball_g7/api_treball.php/records/oferta?filter=estat,gt,0`).then((response) => {
                 console.log(response.data.records);
                 this.resultado = response.data.records;
             })
@@ -41,3 +40,10 @@ export default {
     }
 }
 </script>
+
+<style>
+.ofertes {
+    margin: 10px;
+    margin-bottom: 30px;
+}
+</style>

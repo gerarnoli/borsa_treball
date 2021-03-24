@@ -1,6 +1,7 @@
 <template>
     <div>
-    <b-card
+    <b-card 
+        v-bind:class="{ desactivada: infoOferta.estat==2 }"
         :title=infoOferta.titol
         img-src="https://picsum.photos/600/300/?image=25"
         img-alt="Image"
@@ -12,7 +13,6 @@
         <b-card-text>
             {{this.infoOferta.descripcio}}
         </b-card-text>
-        <b-button variant="primary">Més info</b-button>
     </b-card>
     </div>
 </template>
@@ -25,3 +25,9 @@ export default {
     }
 }
 </script>
+
+<style>
+.desactivada{
+    background-color: lightgrey;
+}
+</style>
