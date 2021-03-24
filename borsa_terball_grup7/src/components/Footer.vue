@@ -12,5 +12,4 @@
   float: left;
   color: white;
 }
-
 </style>
