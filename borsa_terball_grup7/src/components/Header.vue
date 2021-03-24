@@ -3,7 +3,6 @@
     <v-col class="text-left indigo float-left" cols="12">
       <v-btn color="primary" rounded>Iniciar Sessió</v-btn>
       <v-divider class="ma-4" vertical style="display: inline"></v-divider>
-      <v-btn color="primary" rounded>Registre</v-btn>
       <b-button href="https://localhost:8000/oferta/new" class="empresa" variant="primary">Ets empresa?</b-button>
   <b-button v-b-modal.modal-3 class="admin" variant="primary">Registro</b-button>
       <Register/>
