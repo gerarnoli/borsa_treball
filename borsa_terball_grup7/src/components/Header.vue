@@ -13,27 +13,37 @@
         vertical
         style="display: inline"
       ></v-divider>
-      <v-btn
-        color="primary"
-        rounded
-        x-small
-      >Registre</v-btn>  
+      <b-button v-b-modal.modal-3 class="admin" variant="primary">Registro</b-button>
+      <Register/>
+
+
+
+
       <b-button v-b-modal.modal-1 class="empresa" variant="primary">Ets empresa?</b-button>
     </v-col>  
   </v-footer>
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
 
-export default defineComponent({
-  setup() {
-  }
-})
+import Register from './Register';
+
+export default {
+    name: 'Header',
+    components: {
+        Register
+    },
+    datos: () => ({
+    //
+  }),
+};
 </script>
 
 <style scoped>
 .empresa {
   float: right;
 }
+
+
+
 </style>

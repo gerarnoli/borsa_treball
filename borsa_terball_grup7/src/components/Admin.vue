@@ -4,7 +4,7 @@
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group id="input-group-2" label="Usuari" label-for="input-2">
           <b-form-input
-            id="input-1"
+            id="input-2"
             v-model="form.usuari"
             placeholder=""
             required
@@ -13,7 +13,7 @@
 
         <b-form-group id="input-group-2" label="Contrasenya" label-for="input-2">
           <b-form-input
-            id="input-2"
+            id="input-3"
             v-model="form.contrasenya"
             placeholder=""
             required
