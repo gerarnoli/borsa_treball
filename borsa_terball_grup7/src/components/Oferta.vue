@@ -28,6 +28,6 @@ export default {
 
 <style>
 .desactivada{
-    background-color: lightgrey;
+    background-color: lightgrey !important;
 }
 </style>
