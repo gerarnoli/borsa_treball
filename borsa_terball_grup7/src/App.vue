@@ -3,8 +3,6 @@
     <v-main>
       <Header/>
       <Buscador/>
-      <Empresa/>
-      <Admin/>
       <Footer/>
     </v-main>
   </v-app>
@@ -14,8 +12,6 @@
 
 import Header from './components/Header';
 import Buscador from './components/Buscador';
-import Empresa from './components/Empresa';
-import Admin from './components/Admin';
 import Footer from './components/Footer';
 
 export default {
@@ -23,10 +19,8 @@ export default {
 
   components: {
     Footer,
-    Header,
     Buscador,
-    Empresa,
-    Admin
+    Header
   },
   
   data: () => ({
