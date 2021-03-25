@@ -2,7 +2,7 @@
   <v-footer padless absolute>
     <v-col class="text-center indigo lighten-2" cols="12">
       <b-button v-b-modal.modal-2 class="admin" variant="primary">Admin</b-button>
-      <strong>GRUP 7</strong> — {{ new Date().getFullYear() }}
+      <strong> GRUP 7 Treball Borsa - Pedro, Gerard, Bayron, Martí</strong> — {{ new Date().getFullYear() }}
     </v-col>
   </v-footer>
 </template>
