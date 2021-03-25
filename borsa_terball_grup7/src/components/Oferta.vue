@@ -13,6 +13,9 @@
         <b-card-text>
             <em>{{this.infoOferta.ubicacio}}</em>
         </b-card-text>
+         <b-card-text>
+            <b>{{this.infoOferta.data_publicacio}}</b>
+        </b-card-text>
 
     </b-card>
     </div>

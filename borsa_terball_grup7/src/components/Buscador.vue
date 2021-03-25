@@ -8,6 +8,7 @@
                 :infoOferta=oferta>
             </Oferta>
         </b-card-group>
+        <!--class="col-md-2"-->
     </b-row>
 </div>
 </template>
