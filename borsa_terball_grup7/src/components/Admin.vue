@@ -19,7 +19,7 @@
             required
           ></b-form-input>
         </b-form-group>
-        <b-button href="http://localhost:8000/oferta/" variant="primary">Submit</b-button>
+        <b-button :disabled='isDisabled' type="submit" href="http://localhost:8000/oferta/" variant="primary">Submit</b-button>
         <b-button type="reset" variant="danger">Reset</b-button>
       </b-form>
     </b-modal>
@@ -38,8 +38,16 @@
         show: true
       }
     },
+    computed: {
+      isDisabled: function () {
+        if (this.form.usuari != "ausias" || this.form.contrasenya != "ausias") {
+          return true;
+        }
+        return false;
+      }
+    },
     methods: {
-      onSubmit(event) {
+      onSubmit() {
         event.preventDefault()
         alert(JSON.stringify(this.form))
       },
